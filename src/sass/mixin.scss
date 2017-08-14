@@ -3,3 +3,17 @@
   width: $width;
   height: $height;
 }
+// 子路由覆盖父级
+@mixin childZindex {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f3f3f3;
+  z-index: 204;
+  p,
+  span {
+    font-family: Helvetica Neue, Tahoma, Arial;
+  }
+}

@@ -8,7 +8,7 @@
         </div>
         <router-link to="/user_info/home/news" class="hd-right" tag="div">
           <icon name="tongzhi" scale="3"></icon>
-          <badge text="1"></badge>
+          <badge :text="news"></badge>
         </router-link>
       </header>
     </section>
@@ -63,7 +63,8 @@ export default {
   data() {
     return {
       username: '110110110',
-      value: 45
+      value: 45,
+      news: 10
     }
   }
 }

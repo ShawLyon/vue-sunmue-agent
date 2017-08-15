@@ -4,6 +4,7 @@ import Vue from 'vue'
 import FastClick from 'fastclick'
 import App from './App'
 import router from './router'
+import store from './store'
 import './sass/index.scss'   
 import Icon from 'vue-svg-icon/Icon.vue';
 Vue.component('icon', Icon);
@@ -12,14 +13,17 @@ FastClick.attach(document.body)
 Vue.config.productionTip = false
 /* 过滤器 */
 
+// 4位1空格
 Vue.filter('numSpace', function(value){
   return value.replace(/\s/g,'').replace(/(.{4})/g,"$1 ");
 })
+// 手机号空格
 Vue.filter('phoneSpace', function(value){
   return value.replace(/(\d{3})(\d{4})/,"$1 $2 ");
 })
 /* eslint-disable no-new */
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app-box')

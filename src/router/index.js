@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
+import store from '../store'
 Vue.use(Router)
 const login = r => require.ensure([], () => r(require('@/view/login/login')), 'login')
 const user_info = r => require.ensure([], () => r(require('@/view/user_info/user_info')), 'user_info')
@@ -73,6 +73,14 @@ const router = new Router({
       ]
     }
   ]
+})
+router.beforeEach(function (to, from, next) {
+  store.commit('updateLoadingStatus', {isLoading: true})
+  next()
+})
+
+router.afterEach(function (to) {
+  store.commit('updateLoadingStatus', {isLoading: false})
 })
 // router.push('/user_info')
 export default router

@@ -6,7 +6,7 @@
           <icon name="user" scale="4"></icon>
           <span class="username">HI,{{username}}</span>
         </div>
-        <router-link to="/home/news" class="hd-right" tag="div">
+        <router-link to="/user_info/home/news" class="hd-right" tag="div">
           <icon name="tongzhi" scale="3"></icon>
           <badge text="1"></badge>
         </router-link>
@@ -37,7 +37,7 @@
     <section class="total-income">
       <div class="title">
         <h2>收益(元)</h2>
-        <router-link to="/home/details" tag="span">明细</router-link>
+        <router-link to="/user_info/home/details" tag="span">明细</router-link>
       </div>
       <div class="amount">
         <span>1200.32</span>

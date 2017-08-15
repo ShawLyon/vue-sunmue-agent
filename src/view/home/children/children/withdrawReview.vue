@@ -4,7 +4,7 @@
       <img src="./1.png" class="img">
       <h3>提现审核中</h3>
       <p>资金将子啊24小时内到账</p>
-      <router-link to="/home" tag="span">首页>></router-link>
+      <router-link to="/user_info/home" tag="span">首页>></router-link>
     </section>
   </div>
 </template>

@@ -11,14 +11,14 @@ const details = r => require.ensure([], () => r(require('@/view/home/children/de
 const news = r => require.ensure([], () => r(require('@/view/home/children/news')), 'news')
 const withdraw = r => require.ensure([], () => r(require('@/view/home/children/withdraw')), 'withdraw')
 const withdrawReview = r => require.ensure([], () => r(require('@/view/home/children/children/withdrawReview')), 'withdrawReview')
+const deviceDetails = r => require.ensure([], () => r(require('@/view/manage/children/deviceDetails')), 'deviceDetails')
 
-const router= new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
       redirect: '/login'
-    }, 
-    {
+    }, {
       path: '/login',
       component: login,
       name: 'login'
@@ -57,7 +57,14 @@ const router= new Router({
         }, {
           name: 'manage',
           component: manage,
-          path: 'manage'
+          path: 'manage',
+          children: [
+            {
+              name: 'deviceDetails',
+              component: deviceDetails,
+              path: 'deviceDetails'
+            }
+          ]
         }, {
           name: 'order',
           component: order,

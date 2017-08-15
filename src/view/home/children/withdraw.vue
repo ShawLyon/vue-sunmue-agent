@@ -2,6 +2,7 @@
   <div class="withdraw">
     <div class="cardInfoWrapper">
       <section class="cardInfo">
+        <h2 class="title">{{yinhang}}</h2>
         <span class="cardNum">****&nbsp;****&nbsp;****&nbsp;
           <strong>9443</strong>
         </span>
@@ -13,7 +14,7 @@
     </section>
     <section class="submit">
       <p>提现手续费0.8%：0.00元</p>
-      <router-link to="/home/withdraw/withdrawReview" class="btn-submit" tag="button">提现</router-link>
+      <router-link to="/user_info/home/withdraw/withdrawReview" class="btn-submit" tag="button">提现</router-link>
     </section>
     <section class="tips">
       <h3>温馨提示：</h3>
@@ -36,7 +37,8 @@ export default {
   data() {
     return {
       value: 100,
-      holder: '这里是input提示信息'
+      holder: '这里是input提示信息',
+      yinhang: '中国建设银行'
     }
   },
   methods: {
@@ -58,8 +60,17 @@ export default {
     position: relative;
     width: 100%;
     height: 7.5rem;
-    background: url(./card-1.png) no-repeat;
+    border-radius: .2rem;
+    background: $color-theme;
     background-size: 100% 100%;
+    .title {
+      position: absolute;
+      top: 1rem;
+      left: 1.25rem;
+      color: #fff;
+      font-size: .9rem;
+      font-weight: 700;
+    }
     .cardNum {
       position: absolute;
       right: 0.85rem;

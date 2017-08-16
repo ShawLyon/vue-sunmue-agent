@@ -82,5 +82,12 @@ router.beforeEach(function (to, from, next) {
 router.afterEach(function (to) {
   store.commit('updateLoadingStatus', {isLoading: false})
 })
+
+
+// main.js 里，如果你使用了 vue-router
+router.afterEach(function (to) {
+  
+})
+
 // router.push('/user_info')
 export default router

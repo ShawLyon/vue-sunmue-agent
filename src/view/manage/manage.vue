@@ -174,7 +174,6 @@ export default {
       justify-content: space-between;
       font-size: .7rem;
     }
-    .item_top {}
     .item_bottom {
       margin-top: .75rem;
     }

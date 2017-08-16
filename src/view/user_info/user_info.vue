@@ -25,7 +25,6 @@ export default {
 <style lang="scss">
 @import 'src/sass/mixin.scss';
 @import 'src/sass/variable.scss';
-// @import '~vux/src/styles/reset.less';
 body {
   background-color: #f3f3f3;
 }
@@ -35,8 +34,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
-  height: 2.5rem;
+  @include wh(100%,2.5rem);
   display: flex;
   justify-content: space-around;
   align-items: center;

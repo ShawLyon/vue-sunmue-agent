@@ -23,6 +23,6 @@ export default {
 
 <style lang="scss">
 body {
-  // background-color: #f3f3f3;
+  background-color: #fff;
 }
 </style>

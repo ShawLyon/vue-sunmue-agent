@@ -22,7 +22,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import 'src/sass/variable.scss';
+
 .loginWrapper {
+
+  background: #fff;
   .logo {
     margin: 2.25rem 0;
     text-align: center;
@@ -41,7 +44,7 @@ export default {
       &::before {
         content: none;
       }
-      
+
       &::after {
         content: " ";
         position: absolute;

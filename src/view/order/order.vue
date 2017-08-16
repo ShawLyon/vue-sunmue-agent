@@ -91,6 +91,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import 'src/sass/variable.scss';
+@import 'src/sass/mixin.scss';
 .order {
   font-size: 1rem;
   .list_item {
@@ -107,8 +108,7 @@ export default {
     justify-content: space-between;
   }
   .list_item_third_back {
-    width: 3rem;
-    height: 1.5rem;
+    @include wh(3rem,1.5rem);
     border: none;
     border-radius: .2rem;
     background: $color-theme;

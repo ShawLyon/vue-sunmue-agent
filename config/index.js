@@ -36,3 +36,4 @@ module.exports = {
     cssSourceMap: false
   }
 }
+// 测试gitignore是否有效

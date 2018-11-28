@@ -57,4 +57,7 @@ body {
 .router-link-active {
   color: $color-theme;
 }
+.test {
+  
+}
 </style>
